@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bearsfan09.com/sitemap.xml
