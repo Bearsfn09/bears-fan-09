@@ -21,7 +21,7 @@ async function updateLiveStatus() {
         const data = await response.json();
 
         if (data.live) {
-            statusElement.textContent = "🔴 LIVE STATUS: LIVE NOW!";
+           statusElement.textContent = data.game ? `🔴 LIVE NOW — 🎮 Currently Playing: ${data.game}` : "🔴 LIVE NOW";
             statusElement.style.backgroundColor = "#008000";
         } else {
             statusElement.textContent = "⚫ LIVE STATUS: OFFLINE";
