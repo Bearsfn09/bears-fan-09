@@ -16,7 +16,7 @@ Template
 BearsFan09LiveStatus
 Layers
 (0)
-Add trigger
+
 
         const data = await response.json();
 
