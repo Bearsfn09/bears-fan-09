@@ -7,14 +7,14 @@ async function updateLiveStatus() {
     if (!statusElement) return;
 
     try {
-        const response = await fetch("");https://nay5ddojn6fjk7fxaeupuyudza0roxzp.lambda-url.us-east-2.on.aws/");
+   const response = await fetch("https://nay5ddojn6fjk7fxaeupuyudza0rozxp.lambda-url.us-east-2.on.aws/");
 
-Diagram
 
-Template
 
-BearsFan09LiveStatus
-Layers
+
+
+
+
 (0)
 
 
