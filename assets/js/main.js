@@ -2,23 +2,25 @@ document.getElementById('year').textContent = new Date().getFullYear();
 function toggleMenu() { document.querySelector('.navlinks').classList.toggle('open') }
 async function shareSite() { const data = { title: 'Bears Fan 09', text: 'Check out Bears Fan 09 Gaming!', url: location.href }; try { if (navigator.share) { await navigator.share(data) } else if (navigator.clipboard) { await navigator.clipboard.writeText(location.href); alert('Website link copied!') } } catch (e) { } }
 function activateTwitch() {
-  if (!["http:", "https:"].includes(location.protocol)) return;
+    if (!['http:', 'https:'].includes(location.protocol)) return;
 
-  const parent = location.hostname;
-  const player = document.getElementById("twitchPlayer");
+    const parent = location.hostname;
+    const player = document.getElementById("twitchPlayer");
 
-  if (player) {
-    player.innerHTML = `
-      <iframe
-        title="Bearsfn09 Twitch stream"
-        style="width:100%;height:100%;border:0"
-        src="https://player.twitch.tv/?channel=bearsfn09&parent=${encodeURIComponent(parent)}&autoplay=false"
-        allowfullscreen>
-      </iframe>
-    `;
+    if (player) {
+        player.innerHTML = `
+            <iframe
+                title="Bearsfn09 Twitch Stream"
+                src="https://player.twitch.tv/?channel=bearsfn09&parent=${encodeURIComponent(parent)}&autoplay=false"
+                width="100%"
+                height="900"
+                frameborder="0"
+                allowfullscreen>
+            </iframe>
+        `;
 
-    player.style.padding = "0";
-  }
+        player.style.padding = "0";
+    }
 }
 
 activateTwitch();
